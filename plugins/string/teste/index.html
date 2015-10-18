@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+        <meta http-equiv="content-language" content="pt-br" />
+        <meta name="robots" content="index, follow" />
+        <meta name="author" content="Alberto Cerqueira" />
+        <meta name="reply-to" content="alberto.cerqueira1990@gmail.com" />
+        <meta name="author" content="G6 | Technology" />
+        <meta name="reply-to" content="alberto@g6-tech.com" />
+        <meta name="format-detection" content="telephone=no" />
+		<meta name="keywords" content="programador, java, ti, desenvolvedor, desenvolvimento, programação, api, framework, projeto, jquery, javascript, plugins" />
+		<meta name="description" content="Web Utils" />
+		
+		<link rel="stylesheet" href="style.css" type="text/css" />
+		
+		<script type="text/javascript" src="../../jquery/jquery-1.7.2.min.js"></script>
+		<script type="text/javascript" src="../1.0.0/jquery.string.js"></script>
+		<script type="text/javascript">
+			//
+		</script>
+		
+		<title>JQuery String (Plugin)</title>
+	</head>
+	<body>
+		<form id="signup">
+			<h1>JQuery String (Plugin)</h1>
+			<h2>Fields marked (*) are required</h2>
+			<fieldset>
+				<legend>Is Blank</legend>
+				<ol>
+					<li>
+						<label for=""><code>$("#id-input").isBlank();</code></label>
+						<input type="text" id="input1" value="string" />
+					</li>
+					<li>
+						<label for=""><code>Resultado;</code></label>
+						<input type="text" id="input1resposta" />
+					</li>
+				</ol>
+				<script type="text/javascript">
+					$(document).ready(function() {
+						$("#input1resposta").val($("#input1").isBlank());
+					});
+				</script>
+			</fieldset>
+			<fieldset>
+				<legend>Is Blank</legend>
+				<ol>
+					<li>
+						<label for=""><code>$("#id-input").isBlank();</code></label>
+						<input type="text" id="input2" value="" />
+					</li>
+					<li>
+						<label for=""><code>Resultado;</code></label>
+						<input type="text" id="input2resposta" />
+					</li>
+				</ol>
+				<script type="text/javascript">
+					$(document).ready(function() {
+						$("#input2resposta").val($("#input2").isBlank());
+					});
+				</script>
+			</fieldset>
+			<fieldset>
+				<legend>Is Blank</legend>
+				<ol>
+					<li>
+						<label for=""><code>$("#id-div").isBlank();</code></label>
+						<div id="div1">string</div>
+					</li>
+					<li>
+						<label for=""><code>Resultado;</code></label>
+						<div id="div1resposta"></div>
+					</li>
+				</ol>
+				<script type="text/javascript">
+					$(document).ready(function() {
+						$("#div1resposta").text($("#div1").isBlank());
+					});
+				</script>
+			</fieldset>
+			<fieldset>
+				<legend>Is Blank</legend>
+				<ol>
+					<li>
+						<label for=""><code>$("#id-div").isBlank();</code></label>
+						<div id="div2"></div>
+					</li>
+					<li>
+						<label for=""><code>Resultado;</code></label>
+						<div id="div2resposta"></div>
+					</li>
+				</ol>
+				<script type="text/javascript">
+					$(document).ready(function() {
+						$("#div2resposta").text($("#div2").isBlank());
+					});
+				</script>
+			</fieldset>
+			<fieldset>
+				<legend>Trim</legend>
+				<ol>
+					<li>
+						<label for=""><code>$("#id-input").trim();</code></label>
+						<input type="text" id="input3" value="string string string" />
+					</li>
+					<li>
+						<label for=""><code>Resultado;</code></label>
+						<input type="text" id="input3resposta" />
+					</li>
+				</ol>
+				<script type="text/javascript">
+					$(document).ready(function() {
+						$("#input3resposta").val($("#input3").trim());
+					});
+				</script>
+			</fieldset>
+			<fieldset>
+				<legend>Is Blank</legend>
+				<ol>
+					<li>
+						<label for=""><code>$("#id-div").isBlank();</code></label>
+						<div id="div3">string string string</div>
+					</li>
+					<li>
+						<label for=""><code>Resultado;</code></label>
+						<div id="div3resposta"></div>
+					</li>
+				</ol>
+				<script type="text/javascript">
+					$(document).ready(function() {
+						$("#div3resposta").text($("#div3").trim());
+					});
+				</script>
+			</fieldset>
+			<fieldset>
+				<legend>Normalize</legend>
+				<ol>
+					<li>
+						<label for=""><code>$("#id-input").normalize();</code></label>
+						<input type="text" id="input4" value="àáâãäåæçèéêëìíîïðñòóôõöøùúûüýþßàáâãäåæçèéêëìíîïðñòóôõöøùúûýýþÿŕŕ" />
+					</li>
+					<li>
+						<label for=""><code>Resultado;</code></label>
+						<input type="text" id="input4resposta" />
+					</li>
+				</ol>
+				<script type="text/javascript">
+					$(document).ready(function() {
+						$("#input4resposta").val($("#input4").normalize());
+					});
+				</script>
+			</fieldset>
+			<fieldset>
+				<legend>Normalize</legend>
+				<ol>
+					<li>
+						<label for=""><code>$("#id-input").normalize(true);</code></label>
+						<input type="text" id="input5" value="à è í ô ü" />
+					</li>
+					<li>
+						<label for=""><code>Resultado;</code></label>
+						<input type="text" id="input5resposta" />
+					</li>
+				</ol>
+				<script type="text/javascript">
+					$(document).ready(function() {
+						$("#input5resposta").val($("#input5").normalize(true));
+					});
+				</script>
+			</fieldset>
+			<fieldset>
+				<legend>Normalize</legend>
+				<ol>
+					<li>
+						<label for=""><code>$("#id-div").normalize(true);</code></label>
+						<div id="div4">à è í ô ü</div>
+					</li>
+					<li>
+						<label for=""><code>Resultado;</code></label>
+						<div id="div4resposta"></div>
+					</li>
+				</ol>
+				<script type="text/javascript">
+					$(document).ready(function() {
+						$("#div4resposta").text($("#div4").normalize(true));
+					});
+				</script>
+			</fieldset>
+			<fieldset>
+				<legend>Replace Only Letters</legend>
+				<ol>
+					<li>
+						<label for=""><code>$("#id-input").replaceOnlyLetters();</code></label>
+						<input type="text" id="input6" value="a1b2c3" />
+					</li>
+					<li>
+						<label for=""><code>Resultado;</code></label>
+						<input type="text" id="input6resposta" />
+					</li>
+				</ol>
+				<script type="text/javascript">
+					$(document).ready(function() {
+						$("#input6resposta").val($("#input6").replaceOnlyLetters());
+					});
+				</script>
+			</fieldset>
+			<fieldset>
+				<legend>Replace Only Letters</legend>
+				<ol>
+					<li>
+						<label for=""><code>$("#id-div").replaceOnlyLetters();</code></label>
+						<div id="div5">a1b2c3</div>
+					</li>
+					<li>
+						<label for=""><code>Resultado;</code></label>
+						<div id="div5resposta"></div>
+					</li>
+				</ol>
+				<script type="text/javascript">
+					$(document).ready(function() {
+						$("#div5resposta").text($("#div5").replaceOnlyLetters());
+					});
+				</script>
+			</fieldset>
+			<fieldset>
+				<legend>Replace Only Letters and Numbers</legend>
+				<ol>
+					<li>
+						<label for=""><code>$("#id-input").replaceOnlyLettersAndNumbers();</code></label>
+						<input type="text" id="input7" value="a1$b2%c3#" />
+					</li>
+					<li>
+						<label for=""><code>Resultado;</code></label>
+						<input type="text" id="input7resposta" />
+					</li>
+				</ol>
+				<script type="text/javascript">
+					$(document).ready(function() {
+						$("#input7resposta").val($("#input7").replaceOnlyLettersAndNumbers());
+					});
+				</script>
+			</fieldset>
+			<fieldset>
+				<legend>Replace Only Letters and Numbers</legend>
+				<ol>
+					<li>
+						<label for=""><code>$("#id-div").replaceOnlyLettersAndNumbers();</code></label>
+						<div id="div6">a1$b2%c3#</div>
+					</li>
+					<li>
+						<label for=""><code>Resultado;</code></label>
+						<div id="div6resposta"></div>
+					</li>
+				</ol>
+				<script type="text/javascript">
+					$(document).ready(function() {
+						$("#div6resposta").text($("#div6").replaceOnlyLettersAndNumbers());
+					});
+				</script>
+			</fieldset>
+			<fieldset>
+				<legend>Left Pad</legend>
+				<ol>
+					<li>
+						<label for=""><code>$("#id-input").leftPad("###", 20);</code></label>
+						<input type="text" id="input8" value="albertocerqueira" />
+					</li>
+					<li>
+						<label for=""><code>Resultado;</code></label>
+						<input type="text" id="input8resposta" />
+					</li>
+				</ol>
+				<script type="text/javascript">
+					$(document).ready(function() {
+						$("#input8resposta").val($("#input8").leftPad("###", 20));
+					});
+				</script>
+			</fieldset>
+			<fieldset>
+				<legend>Left Pad</legend>
+				<ol>
+					<li>
+						<label for=""><code>$("#id-input").leftPad("###", 20);</code></label>
+						<div id="div7">albertocerqueira</div>
+					</li>
+					<li>
+						<label for=""><code>Resultado;</code></label>
+						<div id="div7resposta"></div>
+					</li>
+				</ol>
+				<script type="text/javascript">
+					$(document).ready(function() {
+						$("#div7resposta").text($("#div7").leftPad("###", 20));
+					});
+				</script>
+			</fieldset>
+		</form>
+	</body>
+</html>
