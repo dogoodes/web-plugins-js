@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+        <meta http-equiv="content-language" content="pt-br" />
+        <meta name="robots" content="index, follow" />
+        <meta name="author" content="Alberto Cerqueira" />
+        <meta name="reply-to" content="alberto.cerqueira1990@gmail.com" />
+        <meta name="author" content="G6 | Technology" />
+        <meta name="reply-to" content="alberto@g6-tech.com" />
+        <meta name="format-detection" content="telephone=no" />
+		<meta name="keywords" content="programador, java, ti, desenvolvedor, desenvolvimento, programação, api, framework, projeto, jquery, javascript, plugins" />
+		<meta name="description" content="WEB Plugins JS" />
+		
+		<link rel="stylesheet" href="style.css" type="text/css" />
+		
+		<script type="text/javascript" src="../../jquery/jquery-1.7.2.min.js"></script>
+		<script type="text/javascript" src="../1.0.0/jquery.generator.js"></script>
+		<script type="text/javascript">
+			//
+		</script>
+		
+		<title>JQuery Generator (Plugin)</title>
+	</head>
+	<body>
+		<form id="signup">
+			<h1>JQuery Generator (Plugin)</h1>
+			<h2>Test conducted on page load</h2>
+			<fieldset>
+				<legend>Generator Chars</legend>
+				<ol>
+					<li>
+						<label for=""><code>$("#id-input").generatorChars();</code></label>
+						<input type="text" id="input1" />
+					</li>
+					<li>
+						<label for=""><code>$("#id-input").generatorChars({max:300});</code></label>
+						<input type="text" id="input2" />
+					</li>
+					<li>
+						<label for=""><code>$("#id-input").generatorChars({letter:'capital'});</code></label>
+						<input type="text" id="input3" />
+					</li>
+					<li>
+						<label for=""><code>$("#id-input").generatorChars({max:20, letter:'any'});</code></label>
+						<input type="text" id="input4" />
+					</li>
+					<li>
+						<label for=""><code>$("#id-div").generatorChars({max:15, tagName:'div'});</code></label>
+						<div id="div1"></div>
+					</li>
+				</ol>
+				<script type="text/javascript">
+					$(document).ready(function(){
+						$("#input1").generatorChars();
+						$("#input2").generatorChars({max:300});
+						$("#input3").generatorChars({letter:'capital'});
+						$("#input4").generatorChars({max:20, letter:'any'});
+						$("#div1").generatorChars({max:15, tagName:'div'});
+					});
+				</script>
+			</fieldset>
+			<fieldset>
+				<legend>Generator Number</legend>
+				<ol>
+					<li>
+						<label for=""><code>$("#id-input").generatorNumber();</code></label>
+						<input type="text" id="input5" />
+					</li>
+					<li>
+						<label for=""><code>$("#id-input").generatorNumber({max:300});</code></label>
+						<input type="text" id="input6" />
+					</li>
+					<li>
+						<label for=""><code>$("#id-input").generatorNumber({min:50});</code></label>
+						<input type="text" id="input7" />
+					</li>
+					<li>
+						<label for=""><code>$("#id-input").generatorNumber({min:150, max:200});</code></label>
+						<input type="text" id="input8" />
+					</li>
+					<li>
+						<label for=""><code>$("#id-div").generatorNumber({tagName:'div'});</code></label>
+						<div id="div2"></div>
+					</li>
+				</ol>
+				<script type="text/javascript">
+					$(document).ready(function(){
+						$("#input5").generatorNumber();
+						$("#input6").generatorNumber({max:300});
+						$("#input7").generatorNumber({min:50});
+						$("#input8").generatorNumber({min:150, max:200});
+						$("#div2").generatorNumber({tagName:'div'});
+					});
+				</script>
+			</fieldset>
+			<fieldset>
+				<legend>Generator Password</legend>
+				<ol>
+					<li>
+						<label for=""><code>$("#id-input").generatorPassword();</code></label>
+						<input type="text" id="input9" />
+					</li>
+					<li>
+						<label for=""><code>$("#id-input").generatorPassword({max:15});</code></label>
+						<input type="text" id="input10" />
+					</li>
+					<li>
+						<label for=""><code>$("#id-input").generatorPassword({level:5});</code></label>
+						<input type="text" id="input11" />
+					</li>
+					<li>
+						<label for=""><code>$("#id-input").generatorPassword({max:10, level:1});</code></label>
+						<input type="text" id="input12" />
+					</li>
+					<li>
+						<label for=""><code>$("#id-div").generatorPassword({tagName:'div'});</code></label>
+						<div id="div3"></div>
+					</li>
+				</ol>
+				<script type="text/javascript">
+					$(document).ready(function(){
+						$("#input9").generatorPassword();
+						$("#input10").generatorPassword({max:15});
+						$("#input11").generatorPassword({level:5});
+						$("#input12").generatorPassword({max:10, level:1});
+						$("#div3").generatorPassword({tagName:'div'});
+					});
+				</script>
+			</fieldset>
+			<fieldset>
+				<legend>Generator Card Drive</legend>
+				<ol>
+					<li>
+						<label for=""><code>$("#id-input").generatorCardDrive();</code></label>
+						<input type="text" id="input13" />
+					</li>
+					<li>
+						<label for=""><code>$("#id-div").generatorCardDrive({tagName:'div'});</code></label>
+						<div id="div4"></div>
+					</li>
+				</ol>
+				<script type="text/javascript">
+					$(document).ready(function(){
+						$("#input13").generatorCardDrive();
+						$("#div4").generatorCardDrive({tagName:'div'});
+					});
+				</script>
+			</fieldset>
+		</form>
+	</body>
+</html>
