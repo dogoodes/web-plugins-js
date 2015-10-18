@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+        <meta http-equiv="content-language" content="pt-br" />
+        <meta name="robots" content="index, follow" />
+        <meta name="author" content="Alberto Cerqueira" />
+        <meta name="reply-to" content="alberto.cerqueira1990@gmail.com" />
+        <meta name="author" content="G6 | Technology" />
+        <meta name="reply-to" content="alberto@g6-tech.com" />
+        <meta name="format-detection" content="telephone=no" />
+		<meta name="keywords" content="programador, java, ti, desenvolvedor, desenvolvimento, programação, api, framework, projeto, jquery, javascript, plugins" />
+		<meta name="description" content="WEB Plugins JS" />
+		
+		<link rel="stylesheet" href="style.css" type="text/css" />
+		
+		<script type="text/javascript" src="../../jquery/jquery-1.10.2.min.js"></script>
+		<script type="text/javascript" src="../1.4.0/Math.uuid.js"></script>
+		<script type="text/javascript">
+			//
+		</script>
+		
+		<title>Math UUID (Plugin)</title>
+	</head>
+	
+	<body>
+		<form id="signup">
+			<h1>Math UUID (Plugin)</h1>
+			<h2>Test conducted on page load</h2>
+			<fieldset>
+				<legend>UUID</legend>
+				<ol>
+					<li>
+						<label for=""><code>Math.uuid(10);</code></label>
+						
+					</li>
+					<li>
+						<label for=""><code>Result;</code></label>
+						<input type="text" id="input1resposta" />
+					</li>
+				</ol>
+				<script type="text/javascript">
+					$(document).ready(function() {
+						$("#input1resposta").val(Math.uuid(10));
+					});
+				</script>
+			</fieldset>
+			<fieldset>
+				<legend>UUID</legend>
+				<ol>
+					<li>
+						<label for=""><code>Math.uuid(5, 25);</code></label>
+						
+					</li>
+					<li>
+						<label for=""><code>Result;</code></label>
+						<input type="text" id="input2resposta" />
+					</li>
+				</ol>
+				<script type="text/javascript">
+					$(document).ready(function() {
+						$("#input2resposta").val(Math.uuid(5, 25));
+					});
+				</script>
+			</fieldset>
+			<fieldset>
+				<legend>UUID Fast</legend>
+				<ol>
+					<li>
+						<label for=""><code>Math.uuidFast();</code></label>
+						
+					</li>
+					<li>
+						<label for=""><code>Result;</code></label>
+						<input type="text" id="input3resposta" />
+					</li>
+				</ol>
+				<script type="text/javascript">
+					$(document).ready(function() {
+						$("#input3resposta").val(Math.uuidFast());
+					});
+				</script>
+			</fieldset>
+			<fieldset>
+				<legend>UUID Compact</legend>
+				<ol>
+					<li>
+						<label for=""><code>Math.uuidCompact();</code></label>
+						
+					</li>
+					<li>
+						<label for=""><code>Result;</code></label>
+						<input type="text" id="input4resposta" />
+					</li>
+				</ol>
+				<script type="text/javascript">
+					$(document).ready(function() {
+						$("#input4resposta").val(Math.uuidCompact());
+					});
+				</script>
+			</fieldset>
+		</form>
+	</body>
+</html>
