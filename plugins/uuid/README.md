@@ -1,4 +1,4 @@
-# Math UUID - Plugin jQuery
+### Math UUID - Plugin jQuery
 =====================
 
 ### Math UUID plugin for [Robert Kieffer](http://www.broofa.com "Robert Kieffer")

@@ -7,6 +7,7 @@ Basic implementation of javascript for HTML/JS project
 - [Generator](#generator)
 - [String](#string)
 - [UUID](#uuid)
+- [Validator](#validator)
 
 ## Date
 Date Plugin for [Alberto Cerqueira](https://github.com/albertocerqueira "Alberto Cerqueira").  
@@ -24,6 +25,10 @@ jQuery String Plugin for [Alberto Cerqueira](https://github.com/albertocerqueira
 jQuery String Plugin for [Alberto Cerqueira](https://github.com/albertocerqueira "Alberto Cerqueira").  
 [see more](https://github.com/g6tech/web-plugins-js/tree/master/plugins/string "see more")
 
-## uuid
+## UUID
 Math.uuid plugin for [broofa](http://www.broofa.com "broofa") - Generate a random uuid.  
 [see more](https://github.com/g6tech/web-plugins-js/tree/master/plugins/uuid "see more")
+
+## Validator
+jQuery plugin for [Alberto Cerqueira](https://github.com/albertocerqueira "Alberto Cerqueira").  
+[see more](https://github.com/g6tech/web-plugins-js/tree/master/plugins/validator "see more")

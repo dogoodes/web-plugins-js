@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+        <meta http-equiv="content-language" content="pt-br" />
+        <meta name="robots" content="index, follow" />
+        <meta name="author" content="Alberto Cerqueira" />
+        <meta name="reply-to" content="alberto.cerqueira1990@gmail.com" />
+        <meta name="author" content="G6 | Technology" />
+        <meta name="reply-to" content="alberto@g6-tech.com" />
+        <meta name="format-detection" content="telephone=no" />
+		<meta name="keywords" content="programador, java, ti, desenvolvedor, desenvolvimento, programação, api, framework, projeto, jquery, javascript, plugins" />
+		<meta name="description" content="WEB Plugins JS" />
+		
+		<link rel="stylesheet" type="text/css" href="style.css" />
+		
+		<script type="text/javascript" src="../../jquery/jquery-1.10.2.min.js"></script>
+		<script type="text/javascript" src="../1.0.0/jquery.validator.js"></script>
+		<script type="text/javascript">
+			//
+		</script>
+		
+		<title>JQuery Validator (Plugin)</title>
+	</head>
+	
+	<body>
+		<form id="signup">
+			<h1>JQuery Validator (Plugin)</h1>
+			<h2>Test conducted on page load</h2>
+			<fieldset>
+				<legend>Valid</legend>
+				<ol>
+					<li>
+						<label for=""><code>$("#id-input").valid('email');</code></label>
+						<input type="text" id="input1" value="alberto@g6-tech.com" />
+					</li>
+					<li>
+						<label for=""><code>Result;</code></label>
+						<input type="text" id="input1resposta" />
+					</li>
+				</ol>
+				<script type="text/javascript">
+					$(document).ready(function() {
+						$("#input1resposta").val($("#input1").valid('email'));
+					});
+				</script>
+			</fieldset>
+			<fieldset>
+				<legend>Valid</legend>
+				<ol>
+					<li>
+						<label for=""><code>$("#id-input").valid('cep');</code></label>
+						<input type="text" id="input2" value="999.999-999" />
+					</li>
+					<li>
+						<label for=""><code>Result;</code></label>
+						<input type="text" id="input2resposta" />
+					</li>
+				</ol>
+				<script type="text/javascript">
+					$(document).ready(function() {
+						$("#input2resposta").val($("#input2").valid('cep'));
+					});
+				</script>
+			</fieldset>
+			<fieldset>
+				<legend>Valid</legend>
+				<ol>
+					<li>
+						<label for=""><code>$("#id-input").valid('url');</code></label>
+						<input type="text" id="input3" value="http://www.g6-tech.com" />
+					</li>
+					<li>
+						<label for=""><code>Result;</code></label>
+						<input type="text" id="input3resposta" />
+					</li>
+				</ol>
+				<script type="text/javascript">
+					$(document).ready(function() {
+						$("#input3resposta").val($("#input3").valid('url'));
+					});
+				</script>
+			</fieldset>
+			<fieldset>
+				<legend>Valid</legend>
+				<ol>
+					<li>
+						<label for=""><code>$("#id-input").valid('cpf');</code></label>
+						<input type="text" id="input4" value="123.456.789-00" />
+					</li>
+					<li>
+						<label for=""><code>Result;</code></label>
+						<input type="text" id="input4resposta" />
+					</li>
+				</ol>
+				<script type="text/javascript">
+					$(document).ready(function() {
+						$("#input4resposta").val($("#input4").valid('cpf'));
+					});
+				</script>
+			</fieldset>
+		</form>
+	</body>
+</html>
