@@ -15,7 +15,7 @@
 		<link rel="stylesheet" type="text/css" href="style.css" />
 		
 		<script type="text/javascript" src="../../jquery/jquery-1.7.2.min.js"></script>
-		<script type="text/javascript" src="../1.8.0/date.js"></script>
+		<script type="text/javascript" src="../2.0.0/date.js"></script>
 		<script type="text/javascript">
 			//
 		</script>
@@ -38,25 +38,36 @@
 						<input type="text" id="input2" />
 					</li>
 					<li>
-						<label for=""><code>date.today("ddmmyyyy");</code></label>
+						<label for=""><code>date.today("dd/mm/yyyy hh:mm:ss");</code></label>
 						<input type="text" id="input3" />
 					</li>
 					<li>
-						<label for=""><code>date.today("mmddyyyy");</code></label>
+						<label for=""><code>date.today("ddmmyyyy");</code></label>
 						<input type="text" id="input4" />
 					</li>
 					<li>
-						<label for=""><code>date.today("yyyymmdd");</code></label>
+						<label for=""><code>date.today("mmddyyyy");</code></label>
 						<input type="text" id="input5" />
+					</li>
+					<li>
+						<label for=""><code>date.today("yyyymmdd");</code></label>
+						<input type="text" id="input6" />
+					</li>
+					
+					<li>
+						<label for=""><code>date.today("yyyymmddhhmmss");</code></label>
+						<input type="text" id="input7" />
 					</li>
 				</ol>
 				<script type="text/javascript">
 					$(document).ready(function(){
 						$("#input1").val(date.today("dd/mm/yyyy"));
 						$("#input2").val(date.today("mm/dd/yyyy"));
-						$("#input3").val(date.today("ddmmyyyy"));
-						$("#input4").val(date.today("mmddyyyy"));
-						$("#input5").val(date.today("yyyymmdd"));
+						$("#input3").val(date.today("dd/mm/yyyy hh:mm:ss"));
+						$("#input4").val(date.today("ddmmyyyy"));
+						$("#input5").val(date.today("mmddyyyy"));
+						$("#input6").val(date.today("yyyymmdd"));
+						$("#input7").val(date.today("yyyymmddhhmmss"));
 					});
 				</script>
 			</fieldset>
@@ -65,28 +76,28 @@
 				<ol>
 					<li>
 						<label for=""><code>new Date(); // today</code></label>
-						<input type="text" id="input6" />
+						<input type="text" id="input8" />
 					</li>
 					<li>
 						<label for=""><code>date.addDays(date, 100); // today +100</code></label>
-						<input type="text" id="input7" />
+						<input type="text" id="input9" />
 					</li>
 					<li>
 						<label for=""><code>date.addDays(date, -100); // today -100</code></label>
-						<input type="text" id="input8" />
+						<input type="text" id="input10" />
 					</li>
 				</ol>
 				<script type="text/javascript">
 					$(document).ready(function(){
-						$("#input6").val(new Date());
+						$("#input8").val(new Date());
 						
 						var date1 = new Date();
 						date.addDays(date1, 100);
-						$("#input7").val(date1);
+						$("#input9").val(date1);
 						
 						var date2 = new Date();
 						date.addDays(date2, -100);
-						$("#input8").val(date2);
+						$("#input10").val(date2);
 					});
 				</script>
 			</fieldset>
@@ -95,28 +106,28 @@
 				<ol>
 					<li>
 						<label for=""><code>new Date(); // today</code></label>
-						<input type="text" id="input9" />
+						<input type="text" id="input11" />
 					</li>
 					<li>
 						<label for=""><code>date.addMonths(date, 1); // today +1</code></label>
-						<input type="text" id="input10" />
+						<input type="text" id="input12" />
 					</li>
 					<li>
 						<label for=""><code>date.addMonths(date, -1); // today -1</code></label>
-						<input type="text" id="input11" />
+						<input type="text" id="input13" />
 					</li>
 				</ol>
 				<script type="text/javascript">
 					$(document).ready(function(){
-						$("#input9").val(new Date());
+						$("#input11").val(new Date());
 						
 						var date1 = new Date();
 						date.addMonths(date1, 1);
-						$("#input10").val(date1);
+						$("#input12").val(date1);
 						
 						var date2 = new Date();
 						date.addMonths(date2, -1);
-						$("#input11").val(date2);
+						$("#input13").val(date2);
 					});
 				</script>
 			</fieldset>
@@ -125,28 +136,28 @@
 				<ol>
 					<li>
 						<label for=""><code>new Date(); // today</code></label>
-						<input type="text" id="input12" />
+						<input type="text" id="input14" />
 					</li>
 					<li>
 						<label for=""><code>date.addYears(date, 1); // today +1</code></label>
-						<input type="text" id="input13" />
+						<input type="text" id="input15" />
 					</li>
 					<li>
 						<label for=""><code>date.addYears(date, -1); // today -1</code></label>
-						<input type="text" id="input14" />
+						<input type="text" id="input16" />
 					</li>
 				</ol>
 				<script type="text/javascript">
 					$(document).ready(function() {
-						$("#input12").val(new Date());
+						$("#input14").val(new Date());
 						
 						var date1 = new Date();
 						date.addYears(date1, 1);
-						$("#input13").val(date1);
+						$("#input15").val(date1);
 						
 						var date2 = new Date();
 						date.addYears(date2, -1);
-						$("#input14").val(date2);
+						$("#input16").val(date2);
 					});
 				</script>
 			</fieldset>
@@ -155,22 +166,22 @@
 				<ol>
 					<li>
 						<label for=""><code>date.getNew({"dd/mm/yyyy": "23/06/1990"})</code></label>
-						<input type="text" id="input15" />
+						<input type="text" id="input17" />
 					</li>
 					<li>
 						<label for=""><code>date.getNew({"mm/dd/yyyy": "06/23/1990"})</code></label>
-						<input type="text" id="input16" />
+						<input type="text" id="input18" />
 					</li>
 					<li>
 						<label for=""><code>date.getNew({"yyyy/mm/dd": "1990/06/23"})</code></label>
-						<input type="text" id="input17" />
+						<input type="text" id="input19" />
 					</li>
 				</ol>
 				<script type="text/javascript">
 					$(document).ready(function() {
-						$("#input15").val(date.getNew({"dd/mm/yyyy": "23/06/1990"}));
-						$("#input16").val(date.getNew({"mm/dd/yyyy": "06/23/1990"}));
-						$("#input17").val(date.getNew({"yyyy/mm/dd": "1990/06/23"}));
+						$("#input17").val(date.getNew({"dd/mm/yyyy": "23/06/1990"}));
+						$("#input18").val(date.getNew({"mm/dd/yyyy": "06/23/1990"}));
+						$("#input19").val(date.getNew({"yyyy/mm/dd": "1990/06/23"}));
 					});
 				</script>
 			</fieldset>
@@ -179,37 +190,47 @@
 				<ol>
 					<li>
 						<label for=""><code>date.getFormat({"dd/mm/yyyy": (new Date())})</code></label>
-						<input type="text" id="input18" />
-					</li>
-					<li>
-						<label for=""><code>date.getFormat({"mm/dd/yyyy": (new Date())})</code></label>
-						<input type="text" id="input19" />
-					</li>
-					<li>
-						<label for=""><code>date.getFormat({"yyyy/mm/dd": (new Date())})</code></label>
 						<input type="text" id="input20" />
 					</li>
 					<li>
-						<label for=""><code>date.getFormat({"ddmmyyyy": (new Date())})</code></label>
+						<label for=""><code>date.getFormat({"mm/dd/yyyy": (new Date())})</code></label>
 						<input type="text" id="input21" />
 					</li>
 					<li>
-						<label for=""><code>date.getFormat({"mmddyyyy": (new Date())})</code></label>
+						<label for=""><code>date.getFormat({"yyyy/mm/dd": (new Date())})</code></label>
 						<input type="text" id="input22" />
 					</li>
 					<li>
-						<label for=""><code>date.getFormat({"yyyymmdd": (new Date())})</code></label>
+						<label for=""><code>date.getFormat({"dd/mm/yyyy hh:mm:ss": (new Date())})</code></label>
 						<input type="text" id="input23" />
+					</li>
+					<li>
+						<label for=""><code>date.getFormat({"ddmmyyyy": (new Date())})</code></label>
+						<input type="text" id="input24" />
+					</li>
+					<li>
+						<label for=""><code>date.getFormat({"mmddyyyy": (new Date())})</code></label>
+						<input type="text" id="input25" />
+					</li>
+					<li>
+						<label for=""><code>date.getFormat({"yyyymmdd": (new Date())})</code></label>
+						<input type="text" id="input26" />
+					</li>
+					<li>
+						<label for=""><code>date.getFormat({"yyyymmddhhmmss": (new Date())})</code></label>
+						<input type="text" id="input27" />
 					</li>
 				</ol>
 				<script type="text/javascript">
 					$(document).ready(function() {
-						$("#input18").val(date.getFormat({"dd/mm/yyyy": (new Date())}));
-						$("#input19").val(date.getFormat({"mm/dd/yyyy": (new Date())}));
-						$("#input20").val(date.getFormat({"yyyy/mm/dd": (new Date())}));
-						$("#input21").val(date.getFormat({"ddmmyyyy": (new Date())}));
-						$("#input22").val(date.getFormat({"mmddyyyy": (new Date())}));
-						$("#input23").val(date.getFormat({"yyyymmdd": (new Date())}));
+						$("#input20").val(date.getFormat({"dd/mm/yyyy": (new Date())}));
+						$("#input21").val(date.getFormat({"mm/dd/yyyy": (new Date())}));
+						$("#input22").val(date.getFormat({"yyyy/mm/dd": (new Date())}));
+						$("#input23").val(date.getFormat({"dd/mm/yyyy hh:mm:ss": (new Date())}));
+						$("#input24").val(date.getFormat({"ddmmyyyy": (new Date())}));
+						$("#input25").val(date.getFormat({"mmddyyyy": (new Date())}));
+						$("#input26").val(date.getFormat({"yyyymmdd": (new Date())}));
+						$("#input27").val(date.getFormat({"yyyymmddhhmmss": (new Date())}));
 					});
 				</script>
 			</fieldset>
@@ -218,40 +239,55 @@
 				<ol>
 					<li>
 						<label for=""><code>Today</code></label>
-						<input type="text" id="input24" />
+						<input type="text" id="input28" />
 					</li>
 					<li>
 						<label for=""><code>Tomorrow</code></label>
-						<input type="text" id="input25" />
+						<input type="text" id="input29" />
 					</li>
 					<li>
 						<label for=""><code>Next Year</code></label>
-						<input type="text" id="input26" />
+						<input type="text" id="input30" />
 					</li>
 					<li>
 						<label for=""><code>date.diffDays(dateTomorrow, dateToday); // difference in days between the current date and the date of tomorrow</code></label>
-						<input type="text" id="input27" />
+						<input type="text" id="input31" />
 					</li>
 					<li>
 						<label for=""><code>date.diffDays(dateNextYear, dateToday); // difference in days between the current date and the date of next year</code></label>
-						<input type="text" id="input28" />
+						<input type="text" id="input32" />
 					</li>
 				</ol>
 				<script type="text/javascript">
 					$(document).ready(function() {
 						var dateToday = new Date();
-						$("#input24").val(dateToday);
+						$("#input28").val(dateToday);
 						
 						var dateTomorrow = new Date();
 						date.addDays(dateTomorrow, 1);
-						$("#input25").val(dateTomorrow);
+						$("#input29").val(dateTomorrow);
 						
 						var dateNextYear = new Date();
 						date.addYears(dateNextYear, 1);
-						$("#input26").val(dateNextYear);
+						$("#input30").val(dateNextYear);
 						
-						$("#input27").val(date.diffDays(dateTomorrow, dateToday));
-						$("#input28").val(date.diffDays(dateNextYear, dateToday));
+						$("#input31").val(date.diffDays(dateTomorrow, dateToday));
+						$("#input32").val(date.diffDays(dateNextYear, dateToday));
+					});
+				</script>
+			</fieldset>
+			<fieldset>
+				<legend>Time</legend>
+				<ol>
+					<li>
+						<label for=""><code>date.time({timestamp: timestamp})</code></label>
+						<input type="text" id="input33" />
+					</li>
+					<li>
+				</ol>
+				<script type="text/javascript">
+					$(document).ready(function() {
+						$("#input33").val(date.time({timestamp: (new Date().getTime())}));
 					});
 				</script>
 			</fieldset>

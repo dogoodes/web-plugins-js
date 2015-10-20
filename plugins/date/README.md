@@ -2,4 +2,4 @@
 =====================
 ### <sup>date.js - plugin for [Alberto Cerqueira](https://github.com/albertocerqueira "Alberto Cerqueira")</sup>
 
-Class with set of methods that perform common functions for handling dates, validations and processes, often re-used. [see more](https://github.com/g6tech/web-plugins-js/tree/master/plugins/date/1.8.0/date.js "see more")
+Class with set of methods that perform common functions for handling dates, validations and processes, often re-used. [see more](https://github.com/g6tech/web-plugins-js/tree/master/plugins/date/2.0.0/date.js "see more")
