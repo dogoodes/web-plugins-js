@@ -6,6 +6,7 @@ Basic implementation of javascript for HTML/JS project
 - [Firebase Chat](#firebase-chat)
 - [Generator](#generator)
 - [String](#string)
+- [Timer](#timer)
 - [UUID](#uuid)
 - [Validator](#validator)
 
@@ -24,6 +25,10 @@ jQuery String Plugin for [Alberto Cerqueira](https://github.com/albertocerqueira
 ## String
 jQuery String Plugin for [Alberto Cerqueira](https://github.com/albertocerqueira "Alberto Cerqueira").  
 [see more](https://github.com/g6tech/web-plugins-js/tree/master/plugins/string "see more")
+
+## Timer
+jQuery Timer Plugin for [Matt Schmidt](http://www.mattptr.net "Matt Schmidt")  
+[see more](https://github.com/g6tech/web-plugins-js/tree/master/plugins/timer "see more")
 
 ## UUID
 Math.uuid plugin for [broofa](http://www.broofa.com "broofa") - Generate a random uuid.  
