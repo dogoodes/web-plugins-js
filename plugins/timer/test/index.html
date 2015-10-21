@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+        <meta http-equiv="content-language" content="pt-br" />
+        <meta name="robots" content="index, follow" />
+        <meta name="author" content="Alberto Cerqueira" />
+        <meta name="reply-to" content="alberto.cerqueira1990@gmail.com" />
+        <meta name="author" content="G6 | Technology" />
+        <meta name="reply-to" content="alberto@g6-tech.com" />
+        <meta name="format-detection" content="telephone=no" />
+		<meta name="keywords" content="programador, java, ti, desenvolvedor, desenvolvimento, programação, api, framework, projeto, jquery, javascript, plugins" />
+		<meta name="description" content="WEB Plugins JS" />
+		
+		<link rel="stylesheet" type="text/css" href="style.css" />
+		
+		<script type="text/javascript" src="../../jquery/jquery-1.7.2.min.js"></script>
+		<script type="text/javascript" src="../0.1.0/jquery.timer.js"></script>
+		<script type="text/javascript">
+			//
+		</script>
+		
+		<title>JQuery Timer (Plugin)</title>
+	</head>
+	
+	<body>
+		<form id="signup">
+			<h1>JQuery Timer (Plugin)</h1>
+			<h2>Test conducted on page load</h2>
+			<fieldset>
+				<legend>Timer</legend>
+				<ol>
+					<li>
+						<label for="">
+							<code>
+								$.timer(1000, function (timer) {<br />
+					  			&nbsp;&nbsp;&nbsp;&nbsp;alert("hello");<br />
+					  			&nbsp;&nbsp;&nbsp;&nbsp;timer.stop();<br />
+					  			});<br />
+					  		</code>
+					  	</label>
+					</li>
+				</ol>
+				<script type="text/javascript">
+					$(document).ready(function() {
+						$.timer(1000, function (timer) {
+							alert("hello");
+							timer.stop();
+						});
+					});
+				</script>
+			</fieldset>
+			<fieldset>
+				<legend>Timer</legend>
+				<ol>
+					<li>
+						<label for="">
+							<code>
+								$.timer(3000, function (timer) {<br />
+					  			&nbsp;&nbsp;&nbsp;&nbsp;alert("hello");<br />
+					  			});<br />
+					  		</code>
+					  	</label>
+					</li>
+				</ol>
+				<script type="text/javascript">
+					$(document).ready(function() {
+						$.timer(2000, function (timer) {
+							alert("hello");
+						});
+					});
+				</script>
+			</fieldset>
+		</form>
+	</body>
+</html>
