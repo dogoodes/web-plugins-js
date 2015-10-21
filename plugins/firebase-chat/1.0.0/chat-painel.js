@@ -1,9 +1,9 @@
-var admin = {id: "g6technology", nome: "G6 | Technology"};
+var admin = {uuid: "g6technology", nome: "G6 | Technology"};
 var lista = new Firebase('https://g6-chat.firebaseIO.com/chat/usuarios/');
 
 jQuery.chatPainel = (function(usuario) {
 	var Class = (function(usuario) {
-        var chat = new Firebase('https://g6-chat.firebaseIO.com/chat/mensagens/' + usuario.id + '/');
+        var chat = new Firebase('https://g6-chat.firebaseIO.com/chat/mensagens/' + usuario.uuid + '/');
         
         this.init = (function() {
             $('.msg-wrap')[0].scrollTop = $('.msg-wrap')[0].scrollHeight;
@@ -25,18 +25,18 @@ jQuery.chatPainel = (function(usuario) {
                 
 				var time = date.getFormat({"dd/mm/yyyy hh:mm:ss": date.create({timestamp: mensagem.timestamp})});
 				
-                _self.mostrarMensagem(mensagem, time, {id: mensagem.usuario.id, nome: mensagem.usuario.nome});
+                _self.mostrarMensagem(mensagem, time, {uuid: mensagem.usuario.uuid, nome: mensagem.usuario.nome});
             });
             
             lista.on('child_added', function(snap) {
                 var usuario = snap.val();
                 
-                var user = '<div class="media conversation" data-id="' + usuario.id + '">' +
+                var user = '<div class="media conversation" data-uuid="' + usuario.uuid + '">' +
                            '<a class="pull-left" href="?' + usuario.id + '=' + usuario.nome + '">' +
                            '<img class="media-object" alt="Avatar" style="width: 50px; height: 50px;" src="http://www.bitrebels.com/wp-content/uploads/2011/02/Original-Facebook-Geek-Profile-Avatar-1.jpg" />' +
                            '</a>' +
                            '<div class="media-body">' +
-                           '<a class="pull-left ' + ((usuario.visualizado) ? 'visualizado' : '') + '" href="?' + usuario.id + '=' + usuario.nome + '">' +
+                           '<a class="pull-left ' + ((usuario.visualizado) ? 'visualizado' : '') + '" href="?' + usuario.uuid + '=' + usuario.nome + '">' +
                            '<h5 class="media-heading">' + usuario.nome + '</h5>' +
                            '<small>' + usuario.mensagem + '</small>' +
                            '</a>' +
@@ -51,8 +51,8 @@ jQuery.chatPainel = (function(usuario) {
                 var usuario = snap.val();
                 
                 $(".conversation-wrap div").each(function(i) {
-                    var id = $(this).attr("data-id");
-                    if (usuario.id == id) {
+                    var uuid = $(this).attr("data-uuid");
+                    if (usuario.uuid == uuid) {
                         $(this).find(".media-body a small").empty().append(usuario.mensagem);
                         if ($(this).find(".media-body a").hasClass("visualizado")) {
                             $(this).find(".media-body a").removeClass("visualizado");
@@ -95,9 +95,9 @@ jQuery.chatPainel = (function(usuario) {
 var usuario = document.location.search;
 if (usuario != null && usuario != "") {
     usuario = usuario.replace("?", "").split("=");
-    Mensagem.atualizarUsuarioNaLista({ firebase: lista, usuario: {id: usuario[0], nome: decodeURI(usuario[1])}, mensagem: "", visualizado: true });
+    Mensagem.atualizarUsuarioNaLista({ firebase: lista, usuario: {uuid: usuario[0], nome: decodeURI(usuario[1])}, mensagem: "", visualizado: true });
 } else {
     usuario = ["G6", "G6 | Technology"];
 }
-var chatPainel = $.chatPainel({id : usuario[0], nome: usuario[1]});
+var chatPainel = $.chatPainel({uuid: usuario[0], nome: usuario[1]});
 chatPainel.init();
