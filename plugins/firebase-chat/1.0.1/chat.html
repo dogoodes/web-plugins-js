@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+    	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+        <meta http-equiv="content-language" content="pt-br" />
+        <meta name="robots" content="index, follow" />
+        <meta name="author" content="Alberto Cerqueira" />
+        <meta name="reply-to" content="alberto.cerqueira1990@gmail.com" />
+        <meta name="author" content="G6 | Technology" />
+        <meta name="reply-to" content="alberto@g6-tech.com" />
+        <meta name="format-detection" content="telephone=no" />
+		<meta name="keywords" content="programador, java, ti, desenvolvedor, desenvolvimento, programação, api, framework, projeto, jquery, javascript, plugins" />
+		<meta name="description" content="WEB Plugins JS" />
+		
+        <!--  -->
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="chat.css" />
+        
+        <!--  -->
+        <script type="text/javascript" src='https://cdn.firebase.com/js/client/1.0.17/firebase.js'></script>
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        
+        <title>Chat</title>
+    </head>
+    
+    <body>
+        <div class="container">
+            <div class="row chat-window col-xs-5 col-md-3">
+                <div class="col-xs-12 col-md-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading top-bar">
+                            <div class="col-md-10 col-xs-9">
+                                <h3 class="panel-title"><span class="glyphicon glyphicon-comment"></span> Alberto Cerqueira</h3>
+                            </div>
+                            <div class="col-md-2 col-xs-3" style="text-align: right;">
+                                <a href="#"><span id="minim_chat_window" class="glyphicon glyphicon-minus icon_minim"></span></a>
+                            </div>
+                        </div>
+                        <div class="panel-body msg_container_base">
+                            <!--
+                            <div class="row msg_container base_sent">
+                                <div class="col-md-10 col-xs-10">
+                                    <div class="messages msg_sent">
+                                        <p>that mongodb thing looks good, huh? tiny master db, and huge document store</p>
+                                        <time datetime="2009-11-13T20:00">Timothy • 51 min</time>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-xs-2 avatar">
+                                    <img src="http://www.bitrebels.com/wp-content/uploads/2011/02/Original-Facebook-Geek-Profile-Avatar-1.jpg" class=" img-responsive ">
+                                </div>
+                            </div>
+                            -->
+                            
+                            <!--
+                            <div class="row msg_container base_receive">
+                                <div class="col-md-2 col-xs-2 avatar">
+                                    <img src="http://www.bitrebels.com/wp-content/uploads/2011/02/Original-Facebook-Geek-Profile-Avatar-1.jpg" class=" img-responsive ">
+                                </div>
+                                <div class="col-md-10 col-xs-10">
+                                    <div class="messages msg_receive">
+                                        <p>that mongodb thing looks good, huh? tiny master db, and huge document store</p>
+                                        <time datetime="2009-11-13T20:00">Timothy • 51 min</time>
+                                    </div>
+                                </div>
+                            </div>
+                            -->
+                        </div>
+                        <div class="panel-footer">
+                            <div class="input-group">
+                                <input id="btn-input" type="text" class="form-control input-sm chat_input" placeholder="escreva algo..." />
+                                <span class="input-group-btn">
+                                    <button class="btn btn-primary btn-sm" id="btn-chat">Enviar</button>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <script type="text/javascript" src="../../date/1.8.0/date.js"></script>
+        <script type="text/javascript" src="../../uuid/1.4.0/Math.uuid.js"></script>
+        <script type="text/javascript" src="mensagem.js"></script>
+        <script type="text/javascript" src="chat.js"></script>
+    </body>
+</html>
