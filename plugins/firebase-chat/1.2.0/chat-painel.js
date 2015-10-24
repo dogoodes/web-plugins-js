@@ -4,11 +4,11 @@ var lista = new Firebase('https://g6-chat.firebaseIO.com/chat/usuarios/');
 jQuery.chatPainel = (function(usuario) {
 	var Class = (function(usuario) {
         var chat = new Firebase('https://g6-chat.firebaseIO.com/chat/mensagens/' + usuario.uuid + '/');
-        
+		
         this.init = (function() {
             $('.msg-wrap')[0].scrollTop = $('.msg-wrap')[0].scrollHeight;
             
-            $('textarea').keypress(function (e) {
+			$('textarea').keypress(function (e) {
                 if (e.keyCode == 13) {
                     _self.gravarMensagem(this.value);
                     return false;
@@ -18,6 +18,13 @@ jQuery.chatPainel = (function(usuario) {
             $("#send-message").click(function() {
                 var mensagem = $("textarea").val();
                 _self.gravarMensagem(mensagem);
+            });
+			
+			$("#remove-message").click(function() {
+				Mensagem.excluir({ firebase: chat });
+				Mensagem.excluir({ firebase: (new Firebase('https://g6-chat.firebaseIO.com/chat/usuarios/' + usuario.uuid + '/')) });
+				var href = document.location.href;
+				window.location = href.substring(0, href.indexOf("?"));
             });
             
             chat.on('child_added', function(snap) {

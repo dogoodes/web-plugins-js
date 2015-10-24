@@ -7,6 +7,18 @@ var Mensagem = {
         return dado;
     }),
     
+    excluir: (function(dado) {
+        var onComplete = (function(error) {
+            if (error) {
+                console.log('remove - synchronization failed');
+            } else {
+                console.log('remove - synchronization succeeded');
+            }
+        });
+        
+        dado.firebase.remove(onComplete);
+    }),
+    
     atualizarUsuarioNaLista: (function(dado) {
         var usuario = {};
         usuario[dado.usuario.uuid] = {};
