@@ -10,7 +10,7 @@ jQuery.chatPainel = (function(usuario) {
             
 			$('textarea').keypress(function (e) {
                 if (e.keyCode == 13) {
-                    _self.gravarMensagem(this.value);
+					_self.gravarMensagem(this.value);
                     return false;
                 }
             });
@@ -29,9 +29,7 @@ jQuery.chatPainel = (function(usuario) {
             
             chat.on('child_added', function(snap) {
                 var mensagem = snap.val();
-                
 				var time = date.getFormat({"dd/mm/yyyy hh:mm:ss": date.create({timestamp: mensagem.timestamp})});
-				
                 _self.mostrarMensagem(mensagem, time, {uuid: mensagem.usuario.uuid, nome: mensagem.usuario.nome});
             });
             
@@ -39,11 +37,11 @@ jQuery.chatPainel = (function(usuario) {
                 var usuario = snap.val();
                 
                 var user = '<div class="media conversation" data-uuid="' + usuario.uuid + '">' +
-                           '<a class="pull-left" href="?' + usuario.id + '=' + usuario.nome + '">' +
-                           '<img class="media-object" alt="Avatar" style="width: 50px; height: 50px;" src="http://www.bitrebels.com/wp-content/uploads/2011/02/Original-Facebook-Geek-Profile-Avatar-1.jpg" />' +
+                           '<a class="pull-left" href="?' + usuario.uuid + '=' + usuario.nome + '">' +
+                           '<img class="media-object" alt="' + usuario.nome + '" style="width: 50px; height: 50px;" src="http://www.bitrebels.com/wp-content/uploads/2011/02/Original-Facebook-Geek-Profile-Avatar-1.jpg" />' +
                            '</a>' +
                            '<div class="media-body">' +
-                           '<a class="pull-left ' + ((usuario.visualizado) ? 'visualizado' : '') + '" href="?' + usuario.uuid + '=' + usuario.nome + '">' +
+                           '<a class="pull-left ' + ((usuario.visualizado) ? 'visualizado' : '') + '" href="?' + usuario.uuid + '=' + usuario.nome + '" title="' + usuario.nome + '">' +
                            '<h5 class="media-heading">' + usuario.nome + '</h5>' +
                            '<small>' + usuario.mensagem + '</small>' +
                            '</a>' +
@@ -72,7 +70,9 @@ jQuery.chatPainel = (function(usuario) {
         });
         
         this.gravarMensagem = (function(mensagem) {
-            Mensagem.inserir({ firebase: chat, mensagem: mensagem, usuario: admin });
+			if (!$.isBlank(mensagem)) {
+				Mensagem.inserir({ firebase: chat, mensagem: mensagem, usuario: admin });
+			}
         });
         
         this.mostrarMensagem = (function (mensagem, time, usuario) {

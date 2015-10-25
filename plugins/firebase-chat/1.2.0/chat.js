@@ -67,14 +67,16 @@ jQuery.chat = (function(usuario) {
 		});
 		
 		this.gravarMensagem = (function(mensagem) {
-	        Mensagem.inserir({ firebase: chat, mensagem: mensagem, usuario: usuario });
-	        Mensagem.atualizarUsuarioNaLista({ firebase: lista, mensagem: mensagem, usuario: usuario });
+			if (!$.isBlank(mensagem)) {
+				Mensagem.inserir({ firebase: chat, mensagem: mensagem, usuario: usuario });
+				Mensagem.atualizarUsuarioNaLista({ firebase: lista, mensagem: mensagem, usuario: usuario });
+			}
 	    });
 	    
 		this.mostrarMensagem = (function(msg) {
 	        $('.msg_container_base').append(msg);
 	        $('.msg_container_base')[0].scrollTop = $('.msg_container_base')[0].scrollHeight;
-
+			
 	        $(".chat_input").val("");
 	    });
 		
