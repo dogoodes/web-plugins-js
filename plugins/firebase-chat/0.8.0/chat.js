@@ -1,8 +1,8 @@
 // TODO: aqui será trocado o usuário
 var usuario = {id : "<id do usuário>", nome: "<nome do usuário>"};
 
-var lista = new Firebase('https://g6-chat.firebaseIO.com/chat/usuarios/');
-var chat = new Firebase('https://g6-chat.firebaseIO.com/chat/mensagens/' + usuario.id + '/');
+var lista = new Firebase('https://<db-firebase>.firebaseIO.com/chat/usuarios/');
+var chat = new Firebase('https://<db-firebase>.firebaseIO.com/chat/mensagens/' + usuario.id + '/');
 
 $(document).ready(function() {
     $('.msg_container_base')[0].scrollTop = $('.msg_container_base')[0].scrollHeight;

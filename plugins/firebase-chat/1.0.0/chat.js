@@ -1,7 +1,7 @@
 jQuery.chat = (function(usuario) {
 	var chatClass = (function(usuario) {
-		var lista = new Firebase('https://g6-chat.firebaseIO.com/chat/usuarios/');
-		var chat = new Firebase('https://g6-chat.firebaseIO.com/chat/mensagens/' + usuario.uuid + '/');
+		var lista = new Firebase('https://<db-firebase>.firebaseIO.com/chat/usuarios/');
+		var chat = new Firebase('https://<db-firebase>.firebaseIO.com/chat/mensagens/' + usuario.uuid + '/');
 		
 		this.init = (function() {
 			$('.chat-window').css('margin-left', ($("body").width() - 300));

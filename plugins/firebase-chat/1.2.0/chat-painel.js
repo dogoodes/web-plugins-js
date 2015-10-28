@@ -1,9 +1,9 @@
 var admin = {uuid: "g6technology", nome: "G6 | Technology"};
-var lista = new Firebase('https://g6-chat.firebaseIO.com/chat/usuarios/');
+var lista = new Firebase('https://<db-firebase>.firebaseIO.com/chat/usuarios/');
 
 jQuery.chatPainel = (function(usuario) {
 	var Class = (function(usuario) {
-        var chat = new Firebase('https://g6-chat.firebaseIO.com/chat/mensagens/' + usuario.uuid + '/');
+        var chat = new Firebase('https://<db-firebase>.firebaseIO.com/chat/mensagens/' + usuario.uuid + '/');
 		
         this.init = (function() {
             $('.msg-wrap')[0].scrollTop = $('.msg-wrap')[0].scrollHeight;
@@ -22,7 +22,7 @@ jQuery.chatPainel = (function(usuario) {
 			
 			$("#remove-message").click(function() {
 				Mensagem.excluir({ firebase: chat });
-				Mensagem.excluir({ firebase: (new Firebase('https://g6-chat.firebaseIO.com/chat/usuarios/' + usuario.uuid + '/')) });
+				Mensagem.excluir({ firebase: (new Firebase('https://<db-firebase>.firebaseIO.com/chat/usuarios/' + usuario.uuid + '/')) });
 				var href = document.location.href;
 				window.location = href.substring(0, href.indexOf("?"));
             });
@@ -47,7 +47,7 @@ jQuery.chatPainel = (function(usuario) {
                            '</a>' +
                            '</div>' +
                            '</div>';
-                    
+                
                 $('.conversation-wrap').prepend(user);
                 $('.conversation-wrap')[0].scrollTop = 0;
             });
@@ -78,7 +78,7 @@ jQuery.chatPainel = (function(usuario) {
         this.mostrarMensagem = (function (mensagem, time, usuario) {
             var msg = '<div class="media msg" data-uuid="' + mensagem.uuid + '">' +
             		  '<a class="pull-left" href="#">' +
-            		  '<img class="media-object" alt="Avatar" style="width: 32px; height: 32px;" src="http://www.bitrebels.com/wp-content/uploads/2011/02/Original-Facebook-Geek-Profile-Avatar-1.jpg">' +
+            		  '<img class="media-object" alt="Avatar" style="width: 32px; height: 32px;" src="http://www.bitrebels.com/wp-content/uploads/2011/02/Original-Facebook-Geek-Profile-Avatar-1.jpg" />' +
             		  '</a>' +
             		  '<div class="media-body">' +
             		  '<small class="pull-right time"><i class="fa fa-clock-o"></i> ' + time + '</small>' +

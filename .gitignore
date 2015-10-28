@@ -6,6 +6,10 @@
 /surefire
 /build/
 *.class
+/.metadata
+.metadata
+*.metadata
+.metadata/*
 
 # WEB
 web.xml

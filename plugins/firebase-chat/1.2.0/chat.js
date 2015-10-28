@@ -1,7 +1,7 @@
 jQuery.chat = (function(usuario) {
 	var chatClass = (function(usuario) {
-		var lista = new Firebase('https://g6-chat.firebaseIO.com/chat/usuarios/');
-		var chat = new Firebase('https://g6-chat.firebaseIO.com/chat/mensagens/' + usuario.uuid + '/');
+		var lista = new Firebase('https://<db-firebase>.firebaseIO.com/chat/usuarios/');
+		var chat = new Firebase('https://<db-firebase>.firebaseIO.com/chat/mensagens/' + usuario.uuid + '/');
 		
 		this.init = (function() {
 			$('.chat-window').css('margin-left', ($("body").width() - 300));
@@ -11,27 +11,29 @@ jQuery.chat = (function(usuario) {
 				var mensagem = snap.val();
 				
 				var msg = null;
+				
+				var time = date.time({timestamp: mensagem.timestamp});
 				if (mensagem.usuario.uuid == usuario.uuid) {
 					msg = '<div class="row msg_container base_sent" data-uuid="' + mensagem.uuid + '">' +
 					'<div class="col-md-10 col-xs-10 ">' +
 					'<div class="messages msg_sent">' +
 					'<p>' + mensagem.mensagem + '</p>' +
-					'<time datetime="2009-11-13T20:00">' + date.time({timestamp: mensagem.timestamp}) + '</time>' +
+					'<time datetime="' + time + '">' + time + '</time>' +
 					'</div>' +
 					'</div>' +
 					'<div class="col-md-2 col-xs-2 avatar">' +
-					'<img src="http://www.bitrebels.com/wp-content/uploads/2011/02/Original-Facebook-Geek-Profile-Avatar-1.jpg" class=" img-responsive ">' +
+					'<img src="http://www.bitrebels.com/wp-content/uploads/2011/02/Original-Facebook-Geek-Profile-Avatar-1.jpg" class="img-responsive" />' +
 					'</div>' +
 					'</div>';
 				} else {
 					msg = '<div class="row msg_container base_receive" data-uuid="' + mensagem.uuid + '">' +
 					'<div class="col-md-2 col-xs-2 avatar">' +
-					'<img src="http://www.bitrebels.com/wp-content/uploads/2011/02/Original-Facebook-Geek-Profile-Avatar-1.jpg" class=" img-responsive ">' +
+					'<img src="http://www.bitrebels.com/wp-content/uploads/2011/02/Original-Facebook-Geek-Profile-Avatar-1.jpg" class="img-responsive" />' +
 					'</div>' +
 					'<div class="col-xs-10 col-md-10">' +
 					'<div class="messages msg_receive">' +
 					'<p>' + mensagem.mensagem + '</p>' +
-					'<time datetime="2009-11-13T20:00">' + date.time({timestamp: mensagem.timestamp}) + '</time>' +
+					'<time datetime="' + time + '">' + time + '</time>' +
 					'</div>' +
 					'</div>' +
 					'</div>';

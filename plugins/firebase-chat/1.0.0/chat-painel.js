@@ -1,9 +1,9 @@
 var admin = {uuid: "g6technology", nome: "G6 | Technology"};
-var lista = new Firebase('https://g6-chat.firebaseIO.com/chat/usuarios/');
+var lista = new Firebase('https://<db-firebase>.firebaseIO.com/chat/usuarios/');
 
 jQuery.chatPainel = (function(usuario) {
 	var Class = (function(usuario) {
-        var chat = new Firebase('https://g6-chat.firebaseIO.com/chat/mensagens/' + usuario.uuid + '/');
+        var chat = new Firebase('https://<db-firebase>.firebaseIO.com/chat/mensagens/' + usuario.uuid + '/');
         
         this.init = (function() {
             $('.msg-wrap')[0].scrollTop = $('.msg-wrap')[0].scrollHeight;
