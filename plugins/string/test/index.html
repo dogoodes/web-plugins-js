@@ -15,7 +15,7 @@
 		<link rel="stylesheet" type="text/css" href="style.css" />
 		
 		<script type="text/javascript" src="../../jquery/jquery-1.7.2.min.js"></script>
-		<script type="text/javascript" src="../1.0.0/jquery.string.js"></script>
+		<script type="text/javascript" src="../1.0.1/jquery.string.js"></script>
 		<script type="text/javascript">
 			//
 		</script>
@@ -103,7 +103,7 @@
 				<legend>Trim</legend>
 				<ol>
 					<li>
-						<label for=""><code>$("#id-input").trim();</code></label>
+						<label for=""><code>$("#id-input").Trim();</code></label>
 						<input type="text" id="input3" value="string string string" />
 					</li>
 					<li>
@@ -113,25 +113,7 @@
 				</ol>
 				<script type="text/javascript">
 					$(document).ready(function() {
-						$("#input3resposta").val($("#input3").trim());
-					});
-				</script>
-			</fieldset>
-			<fieldset>
-				<legend>Is Blank</legend>
-				<ol>
-					<li>
-						<label for=""><code>$("#id-div").isBlank();</code></label>
-						<div id="div3">string string string</div>
-					</li>
-					<li>
-						<label for=""><code>Result;</code></label>
-						<div id="div3resposta"></div>
-					</li>
-				</ol>
-				<script type="text/javascript">
-					$(document).ready(function() {
-						$("#div3resposta").text($("#div3").trim());
+						$("#input3resposta").val($("#input3").Trim());
 					});
 				</script>
 			</fieldset>
