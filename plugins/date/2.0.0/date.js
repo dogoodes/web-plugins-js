@@ -115,8 +115,8 @@ var date =  {
 	}),
 	
 	isValid: (function (i) {
-		var index, fi = this.getInput(i);
-		for (index in fi) {
+		var fi = this.getInput(i);
+		for (var index in fi) {
 			if (isNaN(fi[index])) {
 				return false;
 			}
