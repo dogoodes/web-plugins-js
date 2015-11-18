@@ -32,11 +32,11 @@ var date =  {
 	}),
 	
 	create: (function(u) {
-		if (!isNaN(u.year) && !isNaN(u.month) && !isNaN(u.day)) {
+		if (!this.isBlank(u) && !isNaN(u.year) && !isNaN(u.month) && !isNaN(u.day)) {
 			return new Date(u.year, u.month, u.day);
-		} else if (!isNaN(u.year) && !isNaN(u.month) && !isNaN(u.day) && !isNaN(u.hour) && !isNaN(u.minute) && !isNaN(u.second) && !isNaN(u.millisecond)) {
+		} else if (!this.isBlank(u) && !isNaN(u.year) && !isNaN(u.month) && !isNaN(u.day) && !isNaN(u.hour) && !isNaN(u.minute) && !isNaN(u.second) && !isNaN(u.millisecond)) {
 			return new Date(u.year, u.month, u.day, u.hours, u.minutes, u.seconds, u.millisecond);
-		} else if (!isNaN(u.timestamp)) {
+		} else if (!this.isBlank(u) && !isNaN(u.timestamp)) {
 			return new Date(u.timestamp);
 		} else {
 			return new Date();
@@ -156,7 +156,7 @@ var date =  {
 	}),
 	
 	getFirstDayAndLastDayOfMonth: (function (i) {
-		var date = new Date();
+		var date = this.create(i);
 		var year = date.getFullYear();
 		var month = date.getMonth();
 		var firstDay = new Date(year, month, 1);
