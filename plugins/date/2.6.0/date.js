@@ -1,5 +1,5 @@
 /**
- * Date Plugin - Plugin 2.5.0
+ * Date Plugin - Plugin 2.6.0
  *
  * @author : Alberto Cerqueira
  * @email : alberto.cerqueira1990@gmail.com
