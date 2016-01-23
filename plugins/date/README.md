@@ -4,7 +4,7 @@
 
 Class with set of methods that perform common functions for handling dates, validations and processes, often re-used. [see more](https://github.com/g6tech/web-plugins-js/tree/master/plugins/date/2.6.0/date.js "see more")
 
-You can use the library by adding the code snippet.
+You can use the library by adding the code snippet:
 ```html
-<script type="text/javascript" src="https://raw.githubusercontent.com/g6tech/web-plugins-js/master/plugins/date/jsdate.js"></script>
+<script type="text/javascript" src="https://cdn.rawgit.com/g6tech/web-plugins-js/master/plugins/date/jsdate.js"></script>
 ```
