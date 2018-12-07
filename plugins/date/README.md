@@ -6,5 +6,5 @@ Class with set of methods that perform common functions for handling dates, vali
 
 You can use the library by adding the code snippet:
 ```html
-<script type="text/javascript" src="https://rawgit.com/g6tech/web-plugins-js/master/plugins/date/jsdate.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/g6tech/web-plugins-js/plugins/date/jsdate.js"></script>
 ```
